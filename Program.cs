@@ -21,7 +21,7 @@ namespace CATIACommon
         {
             Application CATIA = (INFITF.Application)Marshal.GetActiveObject("Catia.Application");
 
-            string task = "DrawLines";
+            string task = "DrawGrading";
 
             switch (task)
             {
@@ -30,6 +30,9 @@ namespace CATIACommon
                     break;
                 case "DrawLines":
                     Draw.DrawLines(CATIA);
+                    break;
+                case "DrawGrading":
+                    Draw.DrawGrading(CATIA);
                     break;
             }
         }
